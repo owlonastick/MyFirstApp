@@ -1,6 +1,5 @@
 package com.example.greg.myfirstapp;
 
-import android.content.res.ColorStateList;
 import android.graphics.Color;
 import android.support.annotation.IdRes;
 import android.support.v7.app.AppCompatActivity;
@@ -16,6 +15,7 @@ import android.widget.ToggleButton;
 
 public class MainActivity extends AppCompatActivity {
 
+
     TextView helloTextView;
     ToggleButton visibilityButton;
     SeekBar opacityBar;
@@ -26,10 +26,11 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        //Remove this comment line later
         helloTextView = (TextView)findViewById(R.id.helloTextView);
         visibilityButton = (ToggleButton)findViewById(R.id.visibilityButton);
         opacityBar = (SeekBar)findViewById(R.id.seekBar);
+        colorButtons = (RadioGroup)findViewById(R.id.colorButtons);
 
         visibilityButton.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
